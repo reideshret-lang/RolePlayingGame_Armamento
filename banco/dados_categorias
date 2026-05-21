@@ -1,0 +1,5 @@
+insert into categoria values (1, 'Cortante', 'Armas com lâmina');
+insert into categoria values (2, 'Perfurante', 'Armas que perfuram');
+insert into categoria values (3, 'Impacto', 'Armas que causam dano de impacto');
+insert into categoria values (4, 'Balístico', 'Armas que usam munição');
+insert into categoria values (5, 'Explosivo', 'Armas explosivas');
