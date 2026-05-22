@@ -81,16 +81,30 @@ CREATE TABLE IF NOT EXISTS inventario (
     REFERENCES comprador (idcomprador)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
+
+CREATE TABLE IF NOT EXISTS vendedores (
+  idvendedores INT NOT NULL,
+  nome VARCHAR(50) NOT NULL,
+  local VARCHAR(100) NULL,
+  tipo_loja VARCHAR(50) NULL,
+  dinheiro DECIMAL(10,2) NOT NULL,
+  PRIMARY KEY (idvendedores))
     
- CREATE TABLE IF NOT EXISTS vendas (
+CREATE TABLE IF NOT EXISTS vendas (
   idvendas INT NOT NULL,
   data_venda DATE NOT NULL,
   valor_total DECIMAL(10,2) NOT NULL,
   idcomprador INT NOT NULL,
+  idvendedores INT NOT NULL,
   PRIMARY KEY (idvendas),
   CONSTRAINT fk_vendas_comprador1
     FOREIGN KEY (idcomprador)
     REFERENCES comprador (idcomprador)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT fk_vendas_vendedores1
+    FOREIGN KEY (idvendedores)
+    REFERENCES vendedores (idvendedores)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
     
@@ -140,14 +154,6 @@ CREATE TABLE IF NOT EXISTS arma_encantada (
     REFERENCES encantamentos (idencantamentos)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-    
-CREATE TABLE IF NOT EXISTS vendedores (
-  idvendedores INT NOT NULL,
-  nome VARCHAR(50) NOT NULL,
-  local VARCHAR(100) NULL,
-  tipo_loja VARCHAR(50) NULL,
-  dinheiro DECIMAL(10,2) NOT NULL,
-  PRIMARY KEY (idvendedores))
   
 CREATE TABLE IF NOT EXISTS estoque (
   idestoque INT NOT NULL,
