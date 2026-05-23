@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS arma (
   idarmas INT NOT NULL,
   nome VARCHAR(50) NOT NULL,
   dano INT NOT NULL,
-  alcance INT NULL,
+  alcance VARCHAR(10) NULL,
   peso DECIMAL(5,2) NULL,
   preco_base DECIMAL(10,2) NOT NULL,
   idcategoria INT NOT NULL,
