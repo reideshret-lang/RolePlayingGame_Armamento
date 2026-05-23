@@ -62,8 +62,6 @@ CREATE TABLE IF NOT EXISTS arma (
   idcomprador INT NOT NULL,
   personagem VARCHAR(100) NOT NULL,
   dinheiro DECIMAL(10,2) NULL,
-  localidade VARCHAR(100) null,
-  descricao TEXT null,
   PRIMARY KEY (idcomprador))
   
 CREATE TABLE IF NOT EXISTS inventario (
