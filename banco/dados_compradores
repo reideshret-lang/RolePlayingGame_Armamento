@@ -1,0 +1,26 @@
+------------------------------------------------------
+
+-- não é o objetivo do banco, mas caso fosse conveniente eu teria criado tabelas separadas para raça, guildas, classes e cidades. 
+
+insert into comprador values (1001, 'Angel Byrne', '25', 'Anjo', 'Feiticeiro', 'Sakura', '1', 'Honeyhaven', '900');
+insert into comprador values (2002, 'Allure Hortensis', '25', 'Elemental','Guerreiro','Sakura','3','Coldwallow', '8000');
+insert into comprador values (3003, 'Okura Yoichi', '28', 'Espectro', 'Ladino', 'Colmeia', '5', 'Ghostrest', '6500');
+insert into comprador values (4004, 'Fujikawa Eiji', '25', 'Harpia', 'Ranger', 'Sakura', '2', 'Lastyard', '7500');
+insert into comprador values (5005, 'Watase Rio', '25', 'Elfo', 'Druida', 'Sakura', '3', 'Lastyard', '1000');
+insert into comprador values (6006, 'Sawaya Natsu', '25', 'Fada', 'Mago', 'Sakura', '3', 'Lastyard', '6500');
+insert into comprador values (7007, 'Matsuo Izumo', '25', 'Kitsune', 'Lutador', 'Sakura', '3', 'Lastyard', '6500');
+insert into comprador values (8008, 'Hiroyuki Kurata', '25', 'Elfo', 'Clérigo', 'Sakura', '3', 'Lastyard', '6500');
+
+-- para mudar o valor das moedas
+
+update comprador
+set moedas = '0'
+where idcomprador = 1001;
+
+-- para mudar o peso que tem no inventário
+
+update comprador
+set inventario_peso = '2'
+where idcomprador = 1001;
+
+---------------------------------------------------
