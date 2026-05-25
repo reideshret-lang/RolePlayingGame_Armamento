@@ -1,0 +1,23 @@
+insert into vendedores values (111, 'Seven', 'Starfield', 'Suprimentos', '100000');
+insert into vendedores values (222, 'Lief', 'Fairhollow', 'Espadas', '20000');
+insert into vendedores values (333, 'Damian', 'Mossold', 'Armas Sagradas', '90000');
+insert into vendedores values (444, 'Yvna', 'Cratodale', 'Armas Encantadas', '70000');
+insert into vendedores values (555, 'Neo', 'Barewallow', 'Armas Amaldiçoadas', '800000');
+insert into vendedores values (666, 'Isa', 'Kilrun', 'Armas pesadas e Longa Distancia', '30000');
+
+-- para mudar o valor das moedas
+
+-- caso queira zerar o saldo 
+update vendedores
+set moedas = '0'
+where idvendedores = 111;
+
+-- caso queira subtrair o saldo
+update vendedores
+set moedas = moedas - 1000
+where idvendedores = 222;
+
+-- caso queira adicionar o saldo
+update vendedores
+set moedas = moedas + 280
+where idvendedores = 666;
