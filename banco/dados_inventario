@@ -4,3 +4,8 @@ select c.nome as nome, a.nome as arma, i.quantidade as quantidade, i.equipado as
 from inventario i
 join comprador c on c.idcomprador = i.idcomprador 
 join arma a on a.idarmas = i.idarmas;
+
+-- equipar e desequipar
+update inventario
+set equipado = 'TRUE'
+where idcomprador = 2002;
