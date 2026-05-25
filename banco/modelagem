@@ -93,7 +93,7 @@ CREATE TABLE IF NOT EXISTS vendedores (
   nome VARCHAR(50) NOT NULL,
   local VARCHAR(100) NULL,
   tipo_loja VARCHAR(50) NULL,
-  dinheiro DECIMAL(10,2) NOT NULL,
+  moedas INT default 0,
   PRIMARY KEY (idvendedores))
     
 CREATE TABLE IF NOT EXISTS vendas (
