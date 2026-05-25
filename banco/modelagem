@@ -99,7 +99,7 @@ CREATE TABLE IF NOT EXISTS vendedores (
 CREATE TABLE IF NOT EXISTS vendas (
   idvendas INT NOT NULL,
   data_venda DATE NOT NULL,
-  valor_total DECIMAL(10,2) NOT NULL,
+  valor INT NOT NULL,
   idcomprador INT NOT NULL,
   idvendedores INT NOT NULL,
   PRIMARY KEY (idvendas),
